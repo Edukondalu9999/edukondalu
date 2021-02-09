@@ -1,0 +1,185 @@
+1.Seperate the digit using c#?(example 546)Anr:645
+
+using System;
+
+namespace fact
+{
+    public class digits
+    {
+       public static void Main(string[] args)
+        {
+
+
+            Console.Write("Enter a number:");
+            int num = int.Parse(Console.ReadLine());
+            while (num != 0)
+            {
+                int digit = num % 10;
+                num = num / 10;
+                Console.WriteLine(digit);
+            }
+        }
+
+
+    }
+}
+ 
+Output:Enter a number:546
+6
+4
+5
+
+====================================================================================================================================================================================================
+
+2.Count the digit using c#?(Example 4567)Anr 4digits
+
+
+using System;
+
+namespace fact
+{
+   public class Countofdigit
+    {
+       public static void Main(string[] args)
+        {
+            Console.Write("Enter a number:");
+            int num = int.Parse(Console.ReadLine());
+            int count = 0;
+            while (num != 0)
+            {
+                int digit = num % 10;
+                num = num / 10;
+                count++;
+            }
+            Console.WriteLine(count);
+        }
+    }
+}
+
+Output:Enter a number:7741
+4
+
+====================================================================================================================================================================================================
+
+3.Sum of the digit?
+
+
+using System;
+
+namespace fact
+{
+   public class Class2
+    {
+       public static void Main(string[] args)
+        {
+            Console.Write("Enter number:");
+            int num = int.Parse(Console.ReadLine());
+            int sum = 0;
+            while(num>0)
+            {
+               int digit = num % 10;
+                num = num / 10;
+                sum = sum + digit;
+            }
+            Console.WriteLine(sum);
+					
+        }
+    }
+}
+
+Output:Enter number:789
+24
+
+=====================================================================================================================================================================================================
+
+4.Average of the digit in c#?
+
+using System;
+
+namespace fact
+{
+   public class avg
+    {
+       public static void Main(string[] args)
+        {
+            Console.Write("Enter a number:");
+            int num = int.Parse(Console.ReadLine());
+            int count = 0;
+            int sum = 0;
+            while (num != 0)
+            {
+                int digit = num % 10;
+                sum = sum + digit;
+                num = num / 10;
+                count++;
+            }
+            double avg = sum / count;
+            Console.WriteLine(avg);
+        }
+    }
+}
+
+Ouput:Enter a number:777
+7
+ 
+=====================================================================================================================================================================================================
+
+5.Reverse of a number in c#?
+
+using System;
+
+namespace fact
+{
+   public class avg
+    {
+       public static void Main(string[] args)
+        {
+            Console.Write("Enter a number:");
+            int num = int.Parse(Console.ReadLine());
+            int rev = 0,rem;
+            
+            while (num != 0)
+            {
+                rem = num % 10;
+                rev=rev*10+rem;
+                num = num / 10;
+                
+            }
+           
+            Console.WriteLine(rev);
+        }
+    }
+}
+
+=====================================================================================================================================================================================================
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
