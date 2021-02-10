@@ -1,0 +1,24 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Dotnet
+{
+    class SingleDimenssionalArray
+    {
+        static void Main(string[] args)
+        {
+            int[] a = new int[3];
+            a[0] = 10;
+            a[1] = 20;
+            a[2] = 30;
+            Console.WriteLine(a[0]);
+            Console.WriteLine(a[1]);
+            Console.WriteLine(a[2]);
+
+
+        }
+    }
+}
