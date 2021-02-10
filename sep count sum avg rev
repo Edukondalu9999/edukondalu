@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Dotnet
+{
+    class sep_count_sum_avg_rev
+	{
+		public static void Main(string[] args)
+		{
+
+			Console.Write("Enter the number:");
+			int num = int.Parse(Console.ReadLine());
+			int count = 0;
+			int rev = 0;
+			int sum = 0;
+
+
+			while (num > 0)
+			{
+
+				int digit = num % 10;
+				rev = rev * 10 + digit;
+				num = num / 10;
+				count++;
+				sum = sum + digit;
+				Console.WriteLine(digit);
+				Console.WriteLine();
+			}
+			float avg = sum / count;
+			Console.WriteLine(count);
+			Console.WriteLine(sum);
+			Console.WriteLine(avg);
+			Console.WriteLine(rev);
+
+		}
+	}
+}
+
