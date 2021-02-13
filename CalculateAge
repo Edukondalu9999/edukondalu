@@ -1,0 +1,27 @@
+using System;
+					
+public class Program
+{		
+	public static  double CalculateAge(int BirthYear,int BirthMonth)
+	{
+		int year=2021;
+		int month=2;
+	
+		
+		double count=0;
+		for(int i=BirthYear;i<year;i++)
+		{
+			count++;
+		}
+		int months=BirthMonth-month;
+		count=count*12-months;
+		double age=count/12;
+		
+    return age;
+	}
+		
+	public static void Main()
+	{
+		Console.WriteLine(CalculateAge(1995,6));
+	}
+}
