@@ -1,0 +1,78 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MySystem
+{
+    public class OneSoul
+    {
+        public static void show(string str)
+        {
+            Console.WriteLine(str);
+        }
+        public void display(string str)
+        {
+            Console.WriteLine(str);
+        }
+
+    }
+
+
+
+    public class checknum
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(ispal(4));
+        }
+        public static bool ispal(int num)
+        {
+            int copy = num;
+            int sum = 0;
+            while (num > 0)
+            {
+                int digit = num % 10;
+                num = num / 10;
+                sum = sum * 10 + digit;
+            }
+            return copy == sum;
+        }
+
+
+    }
+}
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using MySystem;
+
+namespace EdukondaluConsoleApp
+{
+   public class Abhiram
+    {
+        static void Main(string[] args)
+        {
+            OneSoul.show("Hello");
+
+            OneSoul o = new OneSoul();
+            o.display("Abhiram");
+            Console.WriteLine(checknum.ispal(125));
+
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
