@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConsoleApp1
+{
+    class ListExample
+    {
+        static void Main(string[] args)
+        {
+            List<student12> s = new List<student12>();
+            s.AddRange(new student12[]{
+                new student12(){stdid=3,name="pooja"},
+               new student12(){stdid=1,name="divya"},
+                new student12(){stdid=1,name="divya"}
+
+
+            });
+            foreach(student12 i in s)
+            {
+                Console.WriteLine(i);
+            }
+            s.Sort();
+            Console.WriteLine("after sorting");
+            foreach (student12 i in s)
+            {
+                Console.WriteLine(i);
+            }
+            //allow duplicates
+        }
+    }
+}

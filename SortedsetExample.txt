@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace ConsoleApp1
+{
+    class SortedsetExample
+    {
+        static void Main(string[] args)
+        {
+            SortedSet<student12> s = new SortedSet<student12>();
+            s.Add(new student12() { name = "pooja", stdid = 6 });
+
+                  s.Add(new student12() { stdid = 8, name = "Raj" });
+
+                 s.Add(new student12() { stdid = 6, name = "pooja" });
+                  s.Add(new student12() { name = "nani", stdid = 4 });
+ 
+            foreach(student12 i in s)
+            {
+                Console.WriteLine(i);
+            }
+                
+          //sortedset not allow duplicates
+        }
+    }
+}

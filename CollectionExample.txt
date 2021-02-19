@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+
+namespace ConsoleApp1
+{
+
+
+    class student12:IComparable<student12>
+    {
+        public string name { get; set; }
+        public int stdid { get; set; }
+
+
+
+        public int CompareTo(student12 other)
+        {
+            if (this.stdid < other.stdid)
+            {
+                return -1;
+            }
+            if (this.stdid > other.stdid)
+            {
+                return 1;
+            }
+            return 0;
+        }
+
+        public override string ToString()
+        {
+            return $"{stdid}\t{name}";
+        }
+    }
+    class CoolectionExample
+    {
+        static void Main(string[] args)
+        {
+            SortedSet<int> set = new SortedSet<int>();
+            set.Add(5);
+            set.Add(1);
+            set.Add(4);
+            set.Add(2);
+            foreach(int i in set)
+            {
+                Console.WriteLine(i);
+            }
+        }
+    }
+}
