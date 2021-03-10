@@ -6,25 +6,27 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class Program
+    class Digitavg
     {
-        public static int Revrse(int num)
+        public static double DigitAvg(int num)
         {
-            int rev = 0;
-            
-            while(num>0)
+            int count = 0;
+            int sum = 0;
+           
+
+            while (num != 0)
             {
                 int digit = num % 10;
-                 rev = rev * 10 + digit;
+                count++;
+                sum = sum + digit;
                 num = num / 10;
-
             }
-            return rev;
+            double avg = sum / count;
+            return avg;
         }
         static void Main(string[] args)
         {
-
-            Console.WriteLine(Revrse(123));
+            Console.WriteLine(DigitAvg(123));
         }
     }
 }

@@ -6,26 +6,23 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class Class9
+    class Class10
     {
 
-        public  string SeparateDigit(int num)
+        public static string SeparateDigit(int num)
         {
-            
+
             string str = string.Empty;
             while (num != 0)
             {
                 str = str + num % 10 + ",";
                 num /= 10;
             }
-            return str.Substring(0,str.Length-1)+".";
-        }  
+            return str.Substring(0, str.Length - 1) + ".";
+        }
         static void Main(string[] args)
-            {
-                Class9 s = new Class9();
-            
-                Console.WriteLine(s.SeparateDigit(123));
-            }
+        {
+            Console.WriteLine(SeparateDigit(123));
         }
     }
-
+}

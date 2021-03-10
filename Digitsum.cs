@@ -6,25 +6,24 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class Program
+    class Digitsum
     {
-        public static int Revrse(int num)
+        public static int DigitSum(int num)
         {
-            int rev = 0;
-            
-            while(num>0)
+            int sum = 0;
+
+
+            while (num != 0)
             {
                 int digit = num % 10;
-                 rev = rev * 10 + digit;
-                num = num / 10;
-
+                sum = sum + digit;
+                num = num/10;
             }
-            return rev;
+            return sum;
         }
         static void Main(string[] args)
         {
-
-            Console.WriteLine(Revrse(123));
+            Console.WriteLine(DigitSum(123456));
         }
     }
 }

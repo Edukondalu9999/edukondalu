@@ -4,30 +4,28 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dotnet
+namespace ConsoleApp1
 {
-    class IsPalin
+    class IsPalindrome
     {
-        public static int Reverse(int num)
+        public static bool palindrome(int num)
         {
             int rev = 0;
+            int copy = num;
             while (num > 0)
             {
                 int digit = num % 10;
                 rev = rev * 10 + digit;
-                num /= 10;
-            }
-            return rev;
-        }
-        public static bool IsPalindrome(int num)
-        {
-            return num == Reverse(num);
-        }
+                num = num / 10;
 
+            }
+            return copy==rev;
+        }
+       
         static void Main(string[] args)
         {
-            Console.WriteLine(IsPalindrome(121));
-            Console.WriteLine(IsPalindrome(123));
+            Console.WriteLine(palindrome(121));
         }
+
     }
 }

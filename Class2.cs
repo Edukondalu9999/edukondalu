@@ -4,18 +4,50 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dotnet
+namespace ConsoleApp1
 {
-    class AriOper
+    class Class2
     {
         static void Main(string[] args)
         {
-            Console.Write("Enter  number1 : ");
-            int num1 = int.Parse(Console.ReadLine());//5
-            Console.Write("Enter  number1 : ");
-            int num2 = int.Parse(Console.ReadLine());//2
-            Console.WriteLine("{0}\t{1}\t{2}\t{3}\t{4}", num1 + num2, num1 - num2, num1 * num2, num1 / num2, num1 % num2);
+            int num = 6;
+            int count = 0;
+            int sum = 0;
+            int copy = num;
+            
+            for(int i=1;i<=num;i++)
+            {
+                if (num % i == 0)
+                {
+                    Console.WriteLine(i);
+                    count++;
+                    sum = sum + i;
+                }
+                 
+            }
+            double avg = sum / count;
+            Console.WriteLine(count);
+            Console.WriteLine(sum);
+            Console.WriteLine(avg);
+            if(count==2)
+            {
+                Console.WriteLine("It is a prime");
+            }
+            else
+            {
+                Console.WriteLine("It is not a prime");
+            }
+            int per = sum - num;
+            if(copy==per)
+            {
+                Console.WriteLine("It is perfct");
+            }
+            else
+            {
+                Console.WriteLine("It is not perfect");
+            }
+
+            
         }
     }
-
 }

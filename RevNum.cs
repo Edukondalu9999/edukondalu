@@ -6,16 +6,15 @@ using System.Threading.Tasks;
 
 namespace ConsoleApp1
 {
-    class Program
+    class RevNum
     {
-        public static int Revrse(int num)
+        public static int Revnum(int num)
         {
             int rev = 0;
-            
-            while(num>0)
+            while (num > 0)
             {
                 int digit = num % 10;
-                 rev = rev * 10 + digit;
+                rev = rev * 10 + digit;
                 num = num / 10;
 
             }
@@ -23,8 +22,8 @@ namespace ConsoleApp1
         }
         static void Main(string[] args)
         {
-
-            Console.WriteLine(Revrse(123));
+            Console.WriteLine(Revnum(123));
         }
+
     }
 }

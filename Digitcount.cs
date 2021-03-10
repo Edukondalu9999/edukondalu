@@ -4,24 +4,26 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Dotnet
+namespace ConsoleApp1
 {
     class Digitcount
+    { 
+    public static int DigitCount(int num)
     {
-        static void Main(string[] args)
+        int count = 0;
+
+
+        while (num != 0)
         {
-
-            int num = 67895;
-            int count = 0;
-            while (num != 0)
-
-            {
-                int digit = num % 10;
-                count++;
-                num = num / 10;
-
-            }
-            Console.WriteLine($"Digit count is {count}");
+            int digit = num % 10;
+            count++;
+            num /= 10;
         }
+        return count;
     }
+    static void Main(string[] args)
+    {
+            Console.WriteLine(DigitCount(123456)); 
+    }
+}
 }
