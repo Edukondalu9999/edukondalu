@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp1
+{
+    class MethodOverloading
+    {
+        public int sum(int a, int b)
+        {
+            return a + b;
+
+        }
+        public int sum(int a, int b, int c)
+        {
+            return a + b + c;
+        }
+
+
+        static void Main(string[] args)
+        {
+            MethodOverloading m = new MethodOverloading();
+            Console.WriteLine(m.sum(1, 2));
+            m.sum(1, 2, 3);
+        }
+    }
+}
